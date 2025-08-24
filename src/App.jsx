@@ -1,4 +1,6 @@
 import { useState } from 'react'
+import Footer from './components/Footer'
+import EmpleadoList from './components/EmpleadoList'
 
 
 function App() {
@@ -6,10 +8,11 @@ function App() {
 
   return (
     <>
-    <main className='container'>
-      <h1>Hola mundo</h1>
-    </main>
-      
+      <main className='container'>
+        <h1>Lista de Empleados</h1>
+        <EmpleadoList></EmpleadoList>
+      </main>
+       <Footer></Footer> 
     </>
   )
 }
