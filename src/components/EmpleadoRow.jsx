@@ -1,10 +1,14 @@
 import React from 'react';
-import { ListGroupItem } from 'react-bootstrap';
+import { ListGroupItem, Badge } from 'react-bootstrap';
 import EmpleadoAvatar from './EmpleadoAvatar';
 
-const EmpleadoRow = () => {
+const EmpleadoRow = ({empleado}) => {
     return (
-        <ListGroupItem className='d-flex'><EmpleadoAvatar></EmpleadoAvatar><div className='d-flex flex-column justify-content-around'><h5 className='mx-2'>Nombre</h5> <div className='d-flex flex-row '><p className='mx-2'>TITLE</p><p>departamento</p></div></div></ListGroupItem>
+        <ListGroupItem className='d-flex'><EmpleadoAvatar pic={empleado.pic}></EmpleadoAvatar>
+        <div className='d-flex flex-column justify-content-around'>
+            <h5>{empleado.fullName}</h5>
+            <small className="text-muted">{empleado.title} <Badge bg="primary">{empleado.department}</Badge></small>
+        </div></ListGroupItem>
     );
 };
 
