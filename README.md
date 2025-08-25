@@ -1,12 +1,39 @@
-# React + Vite
+# Lista de Empleados
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Descripción
 
-Currently, two official plugins are available:
+Employee List App es una **aplicación web en React** que permite mostrar una lista de empleados utilizando **componentes reutilizables** y estilizada con **React-Bootstrap**.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+El proyecto está diseñado para ilustrar **buenas prácticas en React**, como:  
+- Uso de **props** para pasar datos a componentes hijos.  
+- Renderizado de **listas dinámicas** con `.map()` y `key`.  
+- Composición de **componentes reutilizables** (`EmpleadoAvatar`, `EmpleadoRow`, `EmpleadoList`).  
+- Uso de **Bootstrap** para maquetación y estilos rápidos.  
 
-## Expanding the ESLint configuration
+## Deploy
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+Podés ver la aplicación aquí: [Lista de empleados](https://listaempleados-mj.netlify.app/)
+
+## Estructura de Componentes
+
+- **`EmpleadoAvatar`**  
+  Muestra la foto del empleado. Se recibe la propiedad `pic` con el nombre del archivo de imagen.
+
+- **`EmpleadoRow`**  
+  Representa una fila de la lista con:  
+  - Avatar del empleado  
+  - Nombre completo (`fullName`)  
+  - Cargo (`title`)  
+  - Departamento (`department`) como un `Badge` azul  
+
+- **`EmpleadoList`**  
+  Contenedor que recorre un **array de empleados** y renderiza un `EmpleadoRow` por cada uno.
+
+## Tecnologías
+
+- React  
+- React-Bootstrap  
+- Bootstrap 5  
+- JavaScript   
+- CSS
+
